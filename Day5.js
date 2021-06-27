@@ -22,17 +22,27 @@ console.log('this is ex1 result: ',result)
 Write a function "crazySum" which receives two integers. It should return the sum of those two values, but if the two values are the same then it should return their sum multiplied by 3.
 */
 creazySum = function(a,b){
-    return a+b
+    if(a===b){
+        return (a+b)*3
+    }else{
+        return a+b
+    }
 }
-sum = creazySum(20,30)
+sum = creazySum(30,30)
 console.log('this one is exercise 2 result : ',sum)
 /* EXERCISE 3
 Write a function "crazyDiff" that computes the absolute difference between a given number and 19. 
 It should return triple their absolute difference if the given number is greater than 19.
 */
-creazyDiff = function (){
-
+creazyDiff = function (num){
+    if(num > 19){
+        return Math.abs(num-19)*3
+    }else{
+        return Math.abs(num-19)
+    }
 }
+creazyDiffResult = creazyDiff(5)
+console.log('this of result of exercise 3:',creazyDiffResult)
 /* EXERCISE 4
 Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
 */
@@ -52,13 +62,13 @@ Write a function "strivify" which accepts a string.
 It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
 strivify = function (string){
-    if(string == 'Strive'){
+    if(string === 'Strive'){
         result = string
         return result
     }
     return string + 'Strive'   
 }
-resultStrivify = strivify('test')
+resultStrivify = strivify('Strive')
 console.log('exercise 5 result: ',resultStrivify)
 /* WRITE YOUR CODE HERE */
 
@@ -67,7 +77,7 @@ Write a function "check3and7" which accepts a positive number and check if it is
 HINT: Module Operator
 */
 check3and7 = function (number){
-    if(number%3 ==0 || number%7 ==0){
+    if( number>0 && (number%3 ==0 || number%7 ==0)){
         return true
     }else{
         return false
@@ -96,7 +106,7 @@ Write a function "upperFirst" to capitalize the first letter of each word of a g
 upperFirst = function(string){
     return string.charAt(0).toUpperCase()+string.slice(1)
 }
-console.log('exercise 8 solution :',upperFirst('vinay'))
+console.log('exercise 8 solution :',upperFirst('vinay iggf'))
 /* WRITE YOUR CODE HERE */
 
 /* EXERCISE 9
@@ -116,8 +126,8 @@ Write a function "giveMeRandom" which accepts a number n and returns an array co
 giveMeRandom = function(n){
 
     let array = []
-    for(i = 0; i < n.length; i++) {
-        return array.push(Math.floor(Math.random() * 10))
+    for(i = 0; i < n; i++) {
+        array.push(Math.floor(Math.random() * 10))
     }
     return array;
 }
