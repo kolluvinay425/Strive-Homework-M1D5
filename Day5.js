@@ -66,7 +66,7 @@ strivify = function (string){
         result = string
         return result
     }
-    return string + 'Strive'   
+    return string +' '+ 'Strive'   
 }
 resultStrivify = strivify('Strive')
 console.log('exercise 5 result: ',resultStrivify)
@@ -138,3 +138,27 @@ console.log('exercise 10 result: ',giveMeRandom(9))
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit in Eduflow.
 */
+
+console.log('...................................................................operation on an object......................................................')
+
+
+
+
+let listOfOrders = [
+    { id: "A232389", product: "Wireless Keyboard", quantity: 1 },
+    { id: "A232154", product: "Red Bull 500ml", quantity: 10 },
+    { id: "A232301", product: "HD Webcam", quantity: 1 },
+]
+
+let ids = []
+let products = []
+for(i=0;i<listOfOrders.length;i++){
+    listOfOrdersIds = listOfOrders[i].id
+
+    listOfOrdersProducts = listOfOrders[i].product
+    ids.push(listOfOrdersIds)
+    products.push(listOfOrdersProducts)
+
+}
+console.log(ids)
+console.log(products)
